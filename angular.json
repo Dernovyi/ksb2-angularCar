@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ksb2-angularCar"
+    }
+  },
+  "defaultProject": "ksb2-angularCar",
+  "cli": {
+    "analytics": false
+  }
 }
