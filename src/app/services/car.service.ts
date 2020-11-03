@@ -27,8 +27,8 @@ export class CarService {
     return this.httpClient.get<Car>(`${this.baseUrl}/${id}`);
   }
   // tslint:disable-next-line:ban-types
-  updateCar(id: Observable<number>, car: Car): Observable<Object>{
-    return this.httpClient.put(`${this.baseUrl}/${id}`, car);
+  updateCar(car: Car): Observable<Object>{
+    return this.httpClient.put(`${this.baseUrl}`, car);
   }
 
   deleteCar(id: number): Observable<Car>{

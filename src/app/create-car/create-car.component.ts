@@ -24,7 +24,7 @@ car: Car = new Car();
   }
   saveCar(): void{
     this.carService.addCar(this.car).subscribe(data => {
-      console.log(data);
+      // console.log(data);
       this.goToCarList();
     },
       error1 => console.log(error1));

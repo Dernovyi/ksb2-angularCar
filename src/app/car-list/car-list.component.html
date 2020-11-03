@@ -5,8 +5,14 @@
     <th>Mark</th>
     <th>Model</th>
     <th>Color</th>
+    <th>Year</th>
     <th>Actions</th>
-
+    <th>
+      <input type="text"  class="form-control" placeholder="1970" aria-label="startYear" #startYear aria-describedby="basic-addon1">
+    </th>
+    <th>
+      <input type="text"  class="form-control" placeholder="2020" aria-label="finishYear" #finishYear aria-describedby="basic-addon2">
+    </th>
   </tr>
 
   </thead>
@@ -17,6 +23,7 @@
     <td>{{car.mark}}</td>
     <td>{{car.model}}</td>
     <td>{{car.color}}</td>
+    <td>{{car.year}}</td>
     <td>
       <button (click)="updateCar(car.id)" class="btn btn-info">Update</button>
       <button (click)="deleteCar(car.id)" class="btn btn-danger" style="margin-left: 10px">Delete</button>

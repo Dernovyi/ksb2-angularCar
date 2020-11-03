@@ -3,4 +3,5 @@ export class Car {
   mark: string;
   model: string;
   color: string;
+  year: number;
 }

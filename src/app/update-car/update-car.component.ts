@@ -25,7 +25,7 @@ export class UpdateCarComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.carService.updateCar( this.id , this.car ).subscribe(data => {
+    this.carService.updateCar( this.car ).subscribe(data => {
       this.goToCarList();
     }, error => console.log(error));
   }
