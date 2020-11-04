@@ -6,7 +6,6 @@ import {Car} from '../car-list/car';
 
 
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -14,8 +13,11 @@ export class CarService {
   private baseUrl = 'http://localhost:8080/api/cars';
   constructor(private httpClient: HttpClient) { }
 
-  public getCarList(): Observable<Car[]>{
-    return this.httpClient.get<Car[]>(this.baseUrl);
+  public getCarList(start: number, end: number): Observable<{}>{
+    return this.httpClient.get<Car[]>(`${this.baseUrl}/${start}/${end}`);
+  }
+  public getYears(): Observable<number[]>{
+    return this.httpClient.get<number[]>(this.baseUrl + '/years');
   }
 
   // tslint:disable-next-line:ban-types

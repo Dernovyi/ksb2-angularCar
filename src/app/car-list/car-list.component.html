@@ -1,3 +1,24 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div >
+    <select class="form-control" [(ngModel)]="selectedMin" (ngModelChange)="getLast()" >
+      <option *ngFor="let min of minYears" [value]="min"  >
+        {{min}}
+      </option>
+    </select >
+  </div>
+  <div>
+    <select class="form-control" [(ngModel)]="selectedMax" (ngModelChange)="getLast()">
+      <option *ngFor="let max of maxYears" [value]="max"  >
+        {{max}}
+      </option>
+    </select>
+  </div>
+  <div>
+    <button class="btn btn-m btn-outline-secondary" (click)="getCars()" >Filter</button>
+  </div>
+
+</nav>
+
 <table class="table table-hover">
   <thead class="thead-dark">
   <tr>
@@ -7,15 +28,9 @@
     <th>Color</th>
     <th>Year</th>
     <th>Actions</th>
-    <th>
-      <input type="text"  class="form-control" placeholder="1970" aria-label="startYear" #startYear aria-describedby="basic-addon1">
-    </th>
-    <th>
-      <input type="text"  class="form-control" placeholder="2020" aria-label="finishYear" #finishYear aria-describedby="basic-addon2">
-    </th>
   </tr>
-
   </thead>
+
 
   <tbody>
   <tr *ngFor="let car of carList">
