@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {Car} from '../car-list/car';
+import {Car} from '../create-car/create-car.component';
 
 
 

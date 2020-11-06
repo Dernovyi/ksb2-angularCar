@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Car} from '../car-list/car';
 import {CarService} from '../services/car.service';
 import {Router} from '@angular/router';
-import {error} from '@angular/compiler/src/util';
 
 @Component({
   selector: 'app-create-car',
@@ -24,7 +22,7 @@ car: Car = new Car();
   }
   saveCar(): void{
     this.carService.addCar(this.car).subscribe(data => {
-      // console.log(data);
+      console.log(data);
       this.goToCarList();
     },
       error1 => console.log(error1));
@@ -32,4 +30,11 @@ car: Car = new Car();
   goToCarList(): void{
       this.router.navigate(['/cars']);
   }
+}
+export class Car {
+  id: number;
+  mark: string;
+  model: string;
+  color: string;
+  year: number;
 }

@@ -2,8 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 import {CarService} from '../services/car.service';
 import {Router} from '@angular/router';
-import {maxWorkers} from '@angular-devkit/build-angular/src/utils';
-import {element} from 'protractor';
+
 
 
 
@@ -68,4 +67,5 @@ export class CarListComponent implements OnInit {
   }
 
 }
+
 

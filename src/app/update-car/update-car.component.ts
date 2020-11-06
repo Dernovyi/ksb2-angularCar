@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {CarService} from '../services/car.service';
-import {Car} from '../car-list/car';
+
 import {ActivatedRoute, Router} from '@angular/router';
-import {map} from 'rxjs/operators';
+;
 import {Observable} from 'rxjs';
+import {Car} from '../create-car/create-car.component';
 
 @Component({
   selector: 'app-update-car',
@@ -12,7 +13,7 @@ import {Observable} from 'rxjs';
 })
 export class UpdateCarComponent implements OnInit {
    id: Observable<number>;
-  car: Car = new Car();
+  car: Car;
   constructor(private carService: CarService,
               private route: ActivatedRoute,
               private router: Router) { }
@@ -30,6 +31,6 @@ export class UpdateCarComponent implements OnInit {
     }, error => console.log(error));
   }
   goToCarList(): void{
-    this.router.navigate(['/cars']);
+    this.router.navigate(['update-car/:id']);
   }
 }
