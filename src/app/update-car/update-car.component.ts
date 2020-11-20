@@ -12,7 +12,7 @@ import {Car} from '../create-car/create-car.component';
   styleUrls: ['./update-car.component.css']
 })
 export class UpdateCarComponent implements OnInit {
-   id: Observable<number>;
+  id: Observable<number>;
   car: Car;
   constructor(private carService: CarService,
               private route: ActivatedRoute,
